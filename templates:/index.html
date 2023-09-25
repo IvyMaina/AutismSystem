@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Autism Prediction System</h1>
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="5" max="18" required>
+            </div>
+            <div class="form-group">
+                <label for="tribe">Tribe:</label>
+                <input type="text" name="tribe" id="tribe" required>
+            </div>
+            <div class="form-group">
+                <label for="sub_county">Sub County Residence:</label>
+                <select name="sub_county" id="sub_county" required>
+                    <option value="Bahati">Bahati</option>
+                    <option value="Gilgil">Gilgil</option>
+                    <option value="Kuresoi North">Kuresoi North</option>
+                    <option value="Kuresoi South">Kuresoi South</option>
+                    <option value="Molo">Molo</option>
+                    <option value="Naivasha">Naivasha</option>
+                    <option value="Nakuru town">Nakuru town</option>
+                    <option value="Subukia">Subukia</option>
+                    <option value="Njoro">Njoro</option>
+                    <option value="Rongai">Rongai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jaundice">Jaundice:</label>
+                <select name="jaundice" id="jaundice" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="used_app">Used App Before:</label>
+                <select name="used_app" id="used_app" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <input type="submit" value="Predict" class="btn">
+        </form>
+    </div>
+</body>
+</html>
